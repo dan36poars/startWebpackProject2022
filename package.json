@@ -1,0 +1,21 @@
+{
+  "name": "startwebpackproject",
+  "version": "1.0.0",
+  "description": "Started WebPack Project",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --inspect --watch server server/express.js",
+    "server": "node -r dotenv/config server/express.js",
+    "prod": "webpack --config=configs/webpack.prod.js"
+  },
+  "author": "Daniel Corrêa",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
