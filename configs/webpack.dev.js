@@ -2,18 +2,18 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: {
-    commons: ['./src/js/commons/commons.bundle.js'],
-    index: ['./src/js/index/index.bundle.js'],
-    contact: ['./src/js/contact/contact.bundle.js'],
+    commons: './src/js/commons/commons.bundle.js',
+    index: './src/js/index/index.bundle.js',
+    contact: './src/js/contact/contact.bundle.js',
   },
   devtool: 'inline-source-map',
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].bundle.js',
     path: path.resolve(__dirname, '../dist'),
     clean: true,
-    publicPath: './',
+    publicPath: '/',
   },
   devServer: {
     static: 'dist',
@@ -56,13 +56,13 @@ module.exports = {
       chunks: ['commons', 'vendors', 'index'],
     }),
   ],
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'contact',
-      filename: 'contact.html',
-      chunksSortMode: 'manual',
-      template: './src/html/contact/contact.html',
-      chunks: ['commons', 'vendors', 'contact'],
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     title: 'contact',
+  //     filename: 'contact.html',
+  //     chunksSortMode: 'manual',
+  //     template: './src/html/contact/contact.html',
+  //     chunks: ['commons', 'vendors', 'contact'],
+  //   }),
+  // ],
 }
