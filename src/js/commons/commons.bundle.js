@@ -1,1 +1,1 @@
-console.log('commons features')
+import './commons.css'

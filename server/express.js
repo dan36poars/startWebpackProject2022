@@ -1,6 +1,6 @@
 const express = require('express')
+const webpackDev = require('../configs/webpack.dev.js')
 const app = require('express')()
-const path = require('path')
 
 const isDev = process.env.NODE_ENV === 'production'
 
@@ -10,12 +10,17 @@ if (!isDev) {
   const webpack = require('webpack')
   const configDevClient = require('../configs/webpack.dev.js')
   const compiler = webpack(configDevClient)
-  const middleware = require('webpack-dev-middleware')(compiler, {
-    publicPath: configDevClient.output.publicPath,
+  const devMiddleware = require('webpack-dev-middleware')(compiler)
+
+  const hotMiddleware = require('webpack-hot-middleware')(compiler, {
+    noInfo: true,
+    publicPath: configDevClient.output.publicPath
   })
 
-  app.use(middleware)
-  const port = process.env.PORT || 8080
+  app.use(devMiddleware)
+  app.use(hotMiddleware)
+
+  const port = process.env.PORT || 3000
   console.log('Middleware Enabled...')
   console.log(
     'running express in http://localhost:' +
