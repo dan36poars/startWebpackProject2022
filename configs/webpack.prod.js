@@ -46,6 +46,10 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
@@ -58,6 +62,10 @@ module.exports = {
         generator: {
           filename: 'assets/fonts/[name][ext]',
         },
+      },
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader'],
       },
     ],
   },
