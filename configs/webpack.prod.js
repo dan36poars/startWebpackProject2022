@@ -10,12 +10,13 @@ module.exports = {
     index: ['./src/js/index/index.bundle'],
     contact: ['./src/js/contact/contact.bundle'],
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   output: {
-    filename: '[name].bundle.js',
+    filename: 'assets/js/[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
     clean: true,
     publicPath: '/',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   devServer: {
     static: 'dist',
@@ -44,11 +45,27 @@ module.exports = {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[name][ext]',
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'assets/css/[name].css',
+    }),
     new HtmlWebpackPlugin({
       title: 'index',
       filename: 'index.html',

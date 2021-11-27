@@ -1,0 +1,33 @@
+* {
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  background-color: rgba(192, 31, 192, 1);
+}
+
+body {
+  background-image: url(../../images/bg-image-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'ubuntu';
+  src: url('../../fonts/ubuntu-title-fr-1.1.ttf') format('truetype'),
+    url('../../fonts/Ubuntu-Title.ttf') format('truetype');
+}
+
+.hello {
+  background: black;
+  font-family: 'ubuntu';
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(255, 115, 0);
+  background-image: url('../../images/icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

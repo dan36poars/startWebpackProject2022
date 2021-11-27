@@ -1,1 +1,1 @@
-import './commons.css'
+import './commons.scss'
