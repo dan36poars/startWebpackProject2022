@@ -1,0 +1,22 @@
+{
+	"presets": [
+		["@babel/preset-env",
+			{
+				"corejs" : "3.19.2",
+				"useBuiltIns": "usage",
+				"debug": true,
+				"targets": {
+					"browsers": ["last 2 versions", "IE 11"]
+				}
+		}]
+	],
+	"plugins": [
+		"@babel/plugin-transform-regenerator",
+		"@babel/plugin-transform-runtime",
+		"@babel/plugin-transform-arrow-functions",
+		"@babel/plugin-syntax-dynamic-import",
+		"syntax-async-functions",
+		"babel-plugin-transform-async-to-promises",
+		// "babel-plugin-async-to-promises"
+	]
+}

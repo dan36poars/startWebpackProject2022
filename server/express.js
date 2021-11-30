@@ -1,3 +1,4 @@
+require('@babel/register')
 const express = require('express')
 const webpackDev = require('../configs/webpack.dev.js')
 const app = require('express')()
