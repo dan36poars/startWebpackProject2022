@@ -1,4 +1,4 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
   .container-fluid
     a.navbar-brand(href='#') Navbar
     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
@@ -26,7 +26,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
       form.d-flex
         input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
         button.btn.btn-outline-success(type='submit') Search
-.container-fluid
+.container-fluid.bg-danger.bg-gradient
   #carouselExampleSlidesOnly.carousel.slide(data-bs-ride='carousel')
     .carousel-inner
       .carousel-item.active
@@ -35,3 +35,13 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         img.d-block.w-100(src=require('../../images/image-01.jpg') alt='image-02')
       .carousel-item
         img.d-block.w-100(src=require('../../images/image-01.jpg') alt='image-03')
+.container-fluid.bg-primary
+  .row.g-0
+    .col-md-12.m-0.p-0
+      h2.text-center.text-white.ubuntu customize fonts
+  .row.g-0
+    .col-md-12
+      h2.text-center.text-white.nunito fonts from font-awesome 4.7
+      h2.fa.fa-home.d-block.text-center
+        span.text-white.fira-sans Home
+      p.text-white.nunito.text-center Esse icone faz parte do font-awesome.

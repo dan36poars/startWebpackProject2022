@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  background-color: rgba(192, 31, 192, 1);
 }
 
 body {
@@ -15,12 +14,17 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: rgba(192, 31, 192, 1);
 }
 
 @font-face {
   font-family: 'ubuntu';
   src: url('../../fonts/ubuntu-title-fr-1.1.ttf') format('truetype'),
     url('../../fonts/Ubuntu-Title.ttf') format('truetype');
+}
+
+.ubuntu {
+  font-family: 'ubuntu';
 }
 
 .hello {
