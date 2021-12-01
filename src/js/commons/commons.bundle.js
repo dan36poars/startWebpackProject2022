@@ -1,3 +1,9 @@
+// pollyfills
+import 'core-js/es/array'
+import 'core-js/es/set'
+import 'core-js/es/promise'
+import 'regenerator-runtime/runtime'
+
 // bootstrap
 import 'bootstrap'
 
@@ -16,3 +22,5 @@ import '../../../node_modules/fontawesome-4.7/fonts/FontAwesome.otf'
 import notes from '../../data/data.csv'
 
 console.log(notes)
+
+

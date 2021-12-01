@@ -1,6 +1,13 @@
 // import from third-libraries
 @import "../../scss/_main";
 
+// new fonts
+@import "new_fonts";
+
+// custom fonts
+@import "custom_fonts";
+
+// custom scss
 * {
   color: white;
   box-sizing: border-box;
@@ -10,17 +17,12 @@
 }
 
 body {
+  font-family: 'Architects Daughter';
   background-image: url(../../images/bg-image-01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: rgba(192, 31, 192, 1);
-}
-
-@font-face {
-  font-family: 'ubuntu';
-  src: url('../../fonts/ubuntu-title-fr-1.1.ttf') format('truetype'),
-    url('../../fonts/Ubuntu-Title.ttf') format('truetype');
 }
 
 .ubuntu {

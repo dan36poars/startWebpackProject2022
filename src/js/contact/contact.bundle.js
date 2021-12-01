@@ -24,4 +24,8 @@ function component() {
 document.body.appendChild(component())
 document.body.appendChild(imageAdd())
 
-console.log('contact page');
+console.log('contact page')
+
+Array.from(new Set([1, 2, 3, 2, 1]))
+;[1, [2, 3], [4, [5]]].flat(2)
+Promise.resolve(32).then((x) => console.log(x))
