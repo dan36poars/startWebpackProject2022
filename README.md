@@ -38,21 +38,22 @@ it will build a folder name **`dist/`** in root path project.
 it will serve the static folder **`dist/`** at address **http://localhost:8080**
 
 ## Structure Project (Main Folders)
-├ src(**source folder**)
-│ ├── data (**put data file \*.csv**)
-│ ├── fonts (**put fonts**)
-│ ├── images (**put images**)
-│ ├── js (**\*.js files**) 
-│ │   ├── commons (**common features**)
-│ │   ├── contact (**folder contact page sample**)
-│ │   ├── index (**folder index page sample**)
-│ ├── pug
-│ │   ├── _includes (**components for structures**)
-│ │   │   ├── _contact.pug (**components**)
-│ │   │   ├── _index.pug(**components**)
-│ │   ├── contact.pug (**main structure**)
-│ │   ├── index.pug (**main structure**)
-│ ├── scss (**don't touch**)
+
+        ├ src(**source folder**)
+        │ ├── data (**put data file \*.csv**)
+        │ ├── fonts (**put fonts**)
+        │ ├── images (**put images**)
+        │ ├── js (**\*.js files**) 
+        │ │   ├── commons (**common features**)
+        │ │   ├── contact (**folder contact page sample**)
+        │ │   ├── index (**folder index page sample**)
+        │ ├── pug
+        │ │   ├── _includes (**components for structures**)
+        │ │   │   ├── _contact.pug (**components**)
+        │ │   │   ├── _index.pug(**components**)
+        │ │   ├── contact.pug (**main structure**)
+        │ │   ├── index.pug (**main structure**)
+        │ ├── scss (**don't touch**)
 
 
 ## **Features available:**
