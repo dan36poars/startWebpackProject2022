@@ -4,7 +4,7 @@
 
 ## **Install:**
 
-    $ npm install
+    npm install
 
 if you receive a ***message error*** like:
 
@@ -18,22 +18,22 @@ if you receive a ***message error*** like:
 
 You can type:
 
-    $ npm install --force
+    npm install --force
 
 to force the install.
 
 ## **Development Mode**
-    $ npm run dev
+    npm run dev
 
 it will serve the at address **http://localhost:3000**
 
 ## **Builder Mode**
-    $ npm run prod
+    npm run prod
 
 it will build a folder name **`dist/`** in root path project.
 
 ## **Server Mode**
-    $ npm run server
+    npm run server
   
 it will serve the static folder **`dist/`** at address **http://localhost:8080**
 
