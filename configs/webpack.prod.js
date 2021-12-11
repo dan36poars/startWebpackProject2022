@@ -13,7 +13,7 @@ module.exports = {
     index: ['./src/js/index/index.bundle'],
     contact: ['./src/js/contact/contact.bundle'],
   },
-  devtool: 'inline-source-map',
+  devtool: false,
   output: {
     filename: 'assets/js/[name].bundle.js',
     path: path.resolve(__dirname, '../dist'),
@@ -29,14 +29,25 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 40,
+      minSize: 20000,
+      minSizeReduction: 1500,
+      minRemainingSize: 0,
+      minChunks: 1,
       maxAsyncRequests: 20,
       maxInitialRequests: 20,
+      enforceSizeThreshold: 10000,
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 1,
+          priority: -20,
+          reuseExistingChunk: true,
         },
       },
     },
@@ -52,6 +63,7 @@ module.exports = {
             },
           ],
         },
+        minify: CssMinimizerPlugin.cleanCssMinify,
       }),
       new TerserPlugin({
         minify: TerserPlugin.uglifyJsMinify,
