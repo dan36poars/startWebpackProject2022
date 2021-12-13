@@ -133,6 +133,13 @@ module.exports = {
         test: /\.(csv|tsv)$/i,
         use: ['csv-loader'],
       },
+      {
+        test: /\.(json|xml)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/data/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
